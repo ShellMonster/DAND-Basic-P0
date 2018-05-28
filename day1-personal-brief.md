@@ -97,4 +97,3 @@ anaylist: someone who use data to answer questions
   ```
 - [x] 结论
   1. 从本可视化中我们可以看出在较温暖的月份（6-10月）空气中的PM 2.5含量较低，而较寒冷的月份，比如（11-1月）空气中的PM 2.5含量较高。
-
