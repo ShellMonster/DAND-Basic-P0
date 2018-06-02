@@ -13,6 +13,12 @@
 
 ### file lists：
 
-1. day1-guide
-   
+1. [[day1-guide]](https://github.com/mengfanchun2017/Intro-Data-Analysis/blob/master/day1-guide.md)
+2. [day1-question]
+3. [day1-answer]
+4. [day2-guide]
+5. [day2-quetion]
+6. [day2-answer]
+7. [day3-guide]
+8. 
 
