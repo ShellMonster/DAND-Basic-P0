@@ -34,4 +34,4 @@
 17. [[day6-question]](https://github.com/mengfanchun2017/Intro-Data-Analysis/blob/master/day6-question.md)
 18. [[day6-answer]](https://github.com/mengfanchun2017/Intro-Data-Analysis/blob/master/day6-answer.md)
 19. [[day7-guide]](https://github.com/mengfanchun2017/Intro-Data-Analysis/blob/master/day7-guide.md)
-
+20. [[Readme]](https://github.com/mengfanchun2017/Intro-Data-Analysis/blob/master/README.md)
