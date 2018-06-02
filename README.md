@@ -1,4 +1,4 @@
-# DAND Project1 PM2.5
+# Uda DAND Project0
 
 ### notes：
 
@@ -13,12 +13,25 @@
 
 ### file lists：
 
+每日导读7个文件，每日一题与答案共12个文件，包括6*16 = 96道题目。
+
 1. [[day1-guide]](https://github.com/mengfanchun2017/Intro-Data-Analysis/blob/master/day1-guide.md)
-2. [day1-question]
-3. [day1-answer]
-4. [day2-guide]
-5. [day2-quetion]
-6. [day2-answer]
-7. [day3-guide]
-8. 
+2. [[day1-question]](https://github.com/mengfanchun2017/Intro-Data-Analysis/blob/master/day1-question.md)
+3. [[day1-answer]](https://github.com/mengfanchun2017/Intro-Data-Analysis/blob/master/day1-answer.md)
+4. [[day2-guide]](https://github.com/mengfanchun2017/Intro-Data-Analysis/blob/master/day2-guide.md)
+5. [[day2-quetion]](https://github.com/mengfanchun2017/Intro-Data-Analysis/blob/master/day2-question.md)
+6. [[day2-answer]](https://github.com/mengfanchun2017/Intro-Data-Analysis/blob/master/day2-answer.md)
+7. [[day3-guide]](https://github.com/mengfanchun2017/Intro-Data-Analysis/blob/master/day3-guide.md)
+8. [[day3-question]](https://github.com/mengfanchun2017/Intro-Data-Analysis/blob/master/day3-question.md)
+9. [[day3-answer]](https://github.com/mengfanchun2017/Intro-Data-Analysis/blob/master/day3-answer.md)
+10. [[day4-guide]](https://github.com/mengfanchun2017/Intro-Data-Analysis/blob/master/day4-guide.md)
+11. [[day4-question]](https://github.com/mengfanchun2017/Intro-Data-Analysis/blob/master/day4-question.md)
+12. [[day4-answer]](https://github.com/mengfanchun2017/Intro-Data-Analysis/blob/master/day5-answer.md)
+13. [[day5-guide]](https://github.com/mengfanchun2017/Intro-Data-Analysis/blob/master/day5-guide.md)
+14. [[day5-question]](https://github.com/mengfanchun2017/Intro-Data-Analysis/blob/master/day5-question.md)
+15. [[day5-answer]](https://github.com/mengfanchun2017/Intro-Data-Analysis/blob/master/day5-answer.md)
+16. [[day6-guide]](https://github.com/mengfanchun2017/Intro-Data-Analysis/blob/master/day6-guide.md)
+17. [[day6-question]](https://github.com/mengfanchun2017/Intro-Data-Analysis/blob/master/day6-question.md)
+18. [[day6-answer]](https://github.com/mengfanchun2017/Intro-Data-Analysis/blob/master/day6-answer.md)
+19. [[day7-guide]](https://github.com/mengfanchun2017/Intro-Data-Analysis/blob/master/day7-guide.md)
 
