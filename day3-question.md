@@ -1,3 +1,5 @@
+## day3 每日一题
+
 1. 关于python的赋值，左边可以不加下划线写成animal lion='lion' 这样的形式吗？
 2. pandas的dataframe某一列名为'City'，我想抽取该列，写成df['city']，返回key error:city的报错，请说下你理解的为什么会报这个key error这个错误？
 3. 对于箱线图，会出现5个数据点。都是什么。其中有2个点是异常点，是那2个？
