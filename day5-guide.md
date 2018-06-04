@@ -122,6 +122,17 @@ from packA.subA import sa1
 #we have to prefix the function name with the name of the module: 
 x = sa1.helloWorld()
 #其实更加复杂，详细的看请看链接：https://chrisyeh96.github.io/2017/08/08/definitive-guide-python-imports.html
+
+#plus1
+import pandas as pd
+#在导入的时候，在import xxx as x这样吧前面的简化成后面的，比如上面例子中把pandas 简化成 pd
+
+#plus2
+#我们使用import，from xxx import *的时候，会把模块中的全部内容导入
+#但是如果你是这个模块的制作者，你可以使用def _xxx():
+#这样的话在上面导入的时候就不会导入_xxx了，如果需要使用：
+from packA.subA import _xxx
+#也就是说，这是一种规则，但你也可以使用
 ```
 
 - 代码中的空白
