@@ -2,83 +2,152 @@
 
 ### 前面的话
 
-同学们，今天是我们开课的第4天。昨天我们在优达日中已经讲解了项目文件，今天的导学是完成项目文件中的后2个部分回答问题4和问题5。到此，我们项目的文件已经完全完成。请同学们今天全力以赴撰写完成项目文件，争取能够提交第一版本的项目文件。
+同学们，今天是我们开课的第5天。我们已经在前4天的导读中完成了项目相关的所有讲解。后3天的导学将是作为扩展内容，请同学们在完成前面导读内容，项目提交的情况下再学习这3天的内容。前4天的导读文件如下：
+1. [[day1-guide]](https://github.com/mengfanchun2017/Intro-Data-Analysis/blob/master/day1-guide.md)
+4. [[day2-guide]](https://github.com/mengfanchun2017/Intro-Data-Analysis/blob/master/day2-guide.md)
+7. [[day3-guide]](https://github.com/mengfanchun2017/Intro-Data-Analysis/blob/master/day3-guide.md)
+10. [[day4-guide]](https://github.com/mengfanchun2017/Intro-Data-Analysis/blob/master/day4-guide.md)
+
+今天的扩展内容是熟悉PEPs，那么什么是PEPs呢?PEPs是Python Enhancement Proposals的缩写，是一套对于Python语言的书写代码的建议。PEPs是一套很庞大的文档，对Ptyhon编程中的很多都做出了规范，Python中最常参考的PEP8是Style Guide for Python Code链接如下：[[PEP8]](https://www.python.org/dev/peps/pep-0257/)
+
+还是有点绕啊，其实PEP8就是约定俗成额写Python程序的规则。今天的扩展内容就是对其中的重要内容做个介绍，让大家在开始的时候能够从好的习惯下手。
 
 ### 今日目标
 
 今天的目标分为3部分，首先是熟悉一下我们提交项目文件的工作区、再有就是对项目的5个部分进行一下了解、其中1-3会进行讲解，第4部分有些长咱们视频时再完成。
 
-1. （不再是选看了！）问题3:筛选数据部分。现在，这两段的函数大家应该就有爱了吧，这两个函数是：
+- 缩进Identation
+
+    - 函数参数定义时候使用以下几个方式：
 
     ```python
-    def filter_data(data, condition):
-    #这是过滤数据的函数，小括弧中的data是输入数据，后面的condition是筛选条件。
-    #所以这个函数的输出就是从data中筛选出符合condition的数据。
-    #也就是说，你只要调用这个函数，还告诉电脑原始数据是谁（data），你的条件是啥（condition），电脑就blabla的把符合条件的数据给算出来了，也就是这个函数的输出了。
-    
-    def reading_stats(data, filters = [], verbose = True):
-    #这个函数就是根据筛选的数据，把一些统计数据计算出来，然后展示出来给大家看，
-    #如果你觉得为啥这个函数还要筛选数据啊？！上面那个不是已经筛选了么！那你就是非常善于观察的。
-    #问的没错，实际上筛选数据的功能是在这个程序里面调用了上面的那个程序。小括号中的data，filters都是传递给前面那个函数的。
-    #就是说函数是可以自己调用别的函数的（盗梦空间的感觉？）
+    def filter_data(data, condition, arg1, arg2):
+    #1行都写下，注意不要超过79个字符
+    def filter_data(data, condition, 
+                    arg1, arg2):
+    #2如果参数中间换行，第二行起始要在上面的（ 下面
+    def filter_data(
+        	data, condition, arg1, arg2):
+    #3如果是小括号后就换行，就缩进2次，相当于8个空格
     ```
-      那么接下来，我们怎么调用文件呢？我们看看项目中的例子（只调用最后的函数就好了，Uda已经非常简化这个项目了）：
+    - 悬挂缩进那么接下来，我们怎么调用文件呢？我们看看项目中的例子（只调用最后的函数就好了，Uda已经非常简化这个项目了）：
 
     ```python
-    df_test = reading_stats(df_all_cities, ["city == 'Shanghai'", "year >= 2012"])
+    fun = filter_data(
+        data, condition, arg1, arg2)
+    #1悬挂缩进。如果是上面这种调用，第二行缩进4个空格
+    my_list = [
+        1, 2, 3,
+        4, 5, 6,
+    ]
+    #2这也是，注意最后关闭的中括号的位置也是可以的
     ```
 
-    首先是定义一个数据集的名字：df_test
+- 优先使用缩进
 
-    并把它敷给后面函数的输出： = 
+    - 缩进使用4个空格，不是tab键（但是如果已经使用了tab，还是用tab，保持一致）
 
-    后面呢，就是调用函数了：
+- 最大代码长度
+
+    - 不要超过79
+    - docstring和注释不要超过72
+    - 太长了在结尾使用 \ 后转到下一行继续
+
+- 带有运算符的换行：把运算符放到最前面，如下示例
 
     ```python
-    reading_stats(df_all_cities, ["city == 'Shanghai'", "year >= 2012"])
+    income = (gross_wages
+              + taxable_interest
+              + (dividends - qualified_dividends)
+              - ira_deduction
+              - student_loan_interest)
     ```
 
-    reading_stats就是函数名，后面的小括号是我们定义的条件：
+- 代码中的空行：
+
+    - 类和函数定义前后2行空行
+    - 方法前后1行空行
+
+- 文件编码：
+
+    - 总是使用UTF-8
+    - 使用UTF-8的话不用加入encoding declaration 
+
+- 导入：
+
+    - 总在文件的最前面
+    - 大小写敏感
+    - 排列顺序
+        - Standard library imports.
+        - Related third party imports.
+        - Local application/library specific imports.
+    - 每行一个
 
     ```python
-    df_all_cities
-    #这就是我们前面生成的包括所有城市的数据集了
-    city == 'Shanghai'
-    #这里是说明我们要看上海的数据，注意是 == 表示判断，'Shanghai'要用英文引号扩起来。
-    #所有符号都是英文符号！英文符号！英文符号！
-    year >= 2012
-    #这是第二个筛选条件，说明我要看2012年之后的所有数据
+    import os
+    import sys
     ```
 
-    再之后，针对这个筛选出来的df_test数据集，我们就可以看看数据的情况了
-
+    - 导入的标准库实际上就是带有`__init__.py` 文件的目录，这个文件损坏就不能导入库了。后面的。后面带.的就是目录中的一个个文件了。看下例子就明白了：
     ```python
-    df_test.info()
-    #这里的输出和day3导学前面讲的.info()是一样的，大家观察一下就OK了，实际上就是关注第二列的数字。详情请回翻。
+    #test/packA/a1.py
+    def a1_func():
+        print("running a1_func()")
+        
+    test/packA/__init__.py
+    # this import makes a1_func directly accessible from packA.a1_func
+    from packA.a1 import a1_func
+    def packA_func():
+        print("running packA_func()")
     ```
 
-    根据这些，和大家自己的提出的问题1，我们就可以回答问题3的几个小问了。
+- **调用!敲黑板！**
 
-1. 数据探索性分析和可视化（问题4）
+    - 总结下，调用的2种方式：为什么讲了这么多，因为在不同引用方式时候，调用会不一样：
 
-    那么在前面的数据都准备好之后，我们就可以画图了。俗话说一图胜千言，数据可视化展示是非常重要的。这一节，又是一个函数（我保证，这是最后一个函数了）
 
-    ```python
-    def univariate_plot(data, key = '', color = 'blue'):
-    ```
-    那么这里大家应该就熟悉了吧：
+```python
+#Example: start.py needs to import the helloWorld() function in sa1.py
 
-    > 1. univartate_plot是函数名
-    > 2. data是输入的数据，就是问题3那节生成的数据
-    > 3. key = ‘ ‘ 是定义x轴，如果是year，就会按照每年数据展示，如果是month就是按照每月展示
-    > 4. color = 'blue' 是说可以定制图形的颜色，如果不填就默认为蓝色
-    > 5. 这里可以使用颜色编码，但文艺如我还是喜欢直接使用颜色名字，颜色和名字对应如下链接：
-    >    https://blog.csdn.net/rehung/article/details/2567346
+#Solution 1: from packA.subA.sa1 
+import helloWorld
+#这种是绝对模式（可以理解成把整个包都搞进来了）
+#we can call the function directly by name: 
+x = helloWorld()
 
-    明白以后，大家就可以调用这个函数完成问题4了。
+#Solution 2: 
+from packA.subA import sa1 
+#这种是明确模式（就是用到那个，就明确把路径写上搞进来）
+#（也可以import packA.subA.sa1 as sa1，但是为了区分两种模式，我喜欢使用 from的方式）
+#we have to prefix the function name with the name of the module: 
+x = sa1.helloWorld()
+#其实更加复杂，详细的看请看链接：https://chrisyeh96.github.io/2017/08/08/definitive-guide-python-imports.html
+```
 
-1. 其实回答完问题4，项目就结束了。最后的问题5是个开放性的问题，大家可以写写自己想做些什么研究。blabal项目完成。记得按照昨天的导学中的指导内容，把项目文件打包上传才算完成哦。
+- 代码中的空白
+
+  - 不要有空白的地方（直接上例子）
+  ```python
+  spam(ham[1], {eggs: 2})
+  Yes: foo = (0,)
+  if x == 4: print x, y; x, y = y, x
+  dct['key'] = lst[index]
+  #	紧挨着括弧的，逗号前面，定义列表的[]前后、都不要空格
+  ```
+  - 要使用空白的地方（直接上例子）
+  ```python
+  i = i + 1
+  submitted += 1
+  x = x*2 - 1
+  hypot2 = x*x + y*y
+  #赋值和运算要加空格为了更加易读，箭头，input同样。（但是参数不要空格，见下面）
+  def complex(real, imag=0.0):
+      return magic(r=real, i=imag)
+  ```
+
 
 ### 助教叨叨
 
-第4天了，我们已经把要提交的内容过了一遍。由于是7天做完一个项目，这4天还是比较紧张的，大家加油啊！后面的第5、6天主要是项目修改和一些选学问题的答疑。最后一天是一个回顾，希望大家能够加紧完成！（完成项目后课程可以无限回看，否则就关闭了，切记！）
+上面看的是不是很晕啊，其实同学们也不用太担心，比较重点的是import那里的内容，因为在我学习得时候，两种引用方式真的看的有一点点晕。今天的内容主要是让大家感受下Python真的是有很强大的后台的（呵呵，就是大牛们的持续贡献）。大家在学习得时候，总能挖到很多更深层次的东西。但是正是由于这样，在使用Python应用数据分析时候，我们才能够更加方便快捷。
+
+但是前提是，你要能够逐渐熟悉并使用这些工具。要想做到这点，之前说的搜索能力请一定慢慢培养起来。另外，对于资料来讲还是英文的更全面，也请养成google/bing + key word的方式！祝大家今天学习愉快，并找到数据分析师大大的感觉！
