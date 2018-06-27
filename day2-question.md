@@ -1,17 +1,10 @@
 ## day2 每日一题
 
-1. 下面这段代码是干什么的，如果我想运行这段代码应该怎么调用？
+1. 假设检验是用来做什么的？
 
-   ```python
-   def if_conditions():
-       count=1
-       if count==1：
-           return 'hello
-   ```
+2. markdown语法跟普通文本有哪几点区别？
 
-2. '什么是布尔值？
-
-3. python当中遍历(loop)是什么意思？
+3.  什么是python的生成器？
 
 4. python代码里面文本注释前面要加什么符号？
 
@@ -46,3 +39,9 @@
 15. csv文件和tsv文件的区别?
 
 16. .mean()是干什么的?
+
+17.  你是如何理解matplotlib.pyplot库里面关于figure和axe的关系的？
+
+18.  matplotlib.pyplot这个库生成的axe，如果我们要输入图表标题可以用plt.title('xxx')，那么如果我们要修改x轴的标签名字可以怎么写？你发现了设置的规律了吗？
+
+19.  numpy当中有时候设置了random.seed(42)，称为随机种子。你理解的随机种子的作用是什么？为什么很多时候看到的都是42？（提示：宇宙的终极答案）
